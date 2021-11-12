@@ -1,21 +1,18 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "/*": ["./*"]
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "/*": ["./*"]
+        },
+        "jsx": "preserve",
+        "checkJs": true,
+        "allowJs": true,
+        "noEmit": true
     },
-    "jsx": "preserve",
-    "checkJs": true,
-    "allowJs": true,
-    "noEmit": true
-  },
-  "include": [
-    "index.d.ts",
-    "src/**/*"
-  ],
-  "exclude": ["node_modules", "public", ".cache", "dist"]
+    "include": ["index.d.ts", "src/**/*"],
+    "exclude": ["node_modules", "public", ".cache", "dist"]
 }

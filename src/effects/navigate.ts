@@ -1,8 +1,8 @@
 const navigateFx = (dispatch, to) => {
-  history.pushState(null, '', to)
-  dispatchEvent(new CustomEvent("pushstate"))
-}
+    history.pushState(null, "", to);
+    dispatchEvent(new CustomEvent("pushstate"));
+};
 
-const navigate = (to) => [navigateFx, to]
+const navigate = (to) => [navigateFx, to];
 
-export default navigate
+export default navigate;

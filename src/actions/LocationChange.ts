@@ -1,8 +1,8 @@
-import parseUrl from "/src/utils/parseUrl"
+import parseUrl from "/src/utils/parseUrl";
 
 const LocationChange = ({ location: _, ...state }, pathname) => ({
-  location: parseUrl(pathname),
-  ...state,
-})
+    location: parseUrl(pathname),
+    ...state,
+});
 
-export default LocationChange
+export default LocationChange;
