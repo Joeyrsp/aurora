@@ -1,0 +1,16 @@
+@import "sanitize.css";
+@import "sanitize.css/forms.css";
+@import "sanitize.css/assets.css";
+@import "sanitize.css/typography.css";
+@import "sanitize.css/reduce-motion.css";
+
+.app {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: min-content auto min-content;
+}
+
+.header {
+    grid-column: 1 / span 2;
+}
