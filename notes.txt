@@ -1,0 +1,44 @@
+globals:
+total spent
+
+
+properties of item:
+rarity (uncommon ... artefact)
+type (wondrous, weapon, armour, shield, potion)
+attunement
+price
+name
+description
+icon?
+tier (hidden, override)
+
+
+aurora tier:
+1: 1,000
+uncommon && wonderous
+potion ????????
+2: 5,000
+utility pawn
+uncommon
+3: 15,000
+utility library
+rare
+4: 25,000
+utility delivery
+forge
+5: 50,000
+utility teleport
+very rare
+6: 100,000
+legendary
+artefact
+
+
+what is available:
+if (tier) {
+    tier <= party
+} else {
+    any of tier filters <= party 
+    &&
+    all of page filters (any within category)
+}
