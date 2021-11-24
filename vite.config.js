@@ -8,6 +8,7 @@ export default {
             localsConvention: "camelCase",
         },
     },
+    base: "/aurora/",
     root: "src",
     build: {
         outDir: "../docs",
