@@ -11,8 +11,10 @@
         "jsx": "preserve",
         "checkJs": true,
         "allowJs": true,
-        "noEmit": true
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
     },
-    "include": ["index.d.ts", "src/**/*"],
+    "include": ["src/**/*"],
     "exclude": ["node_modules", "public", ".cache", "dist"]
 }

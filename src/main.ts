@@ -1,8 +1,8 @@
 import { app } from "hyperapp";
 
-import init from "/src/init";
-import view from "/src/view";
-import subscriptions from "/src/subscriptions";
+import init from "/init";
+import view from "/view";
+import subscriptions from "/subscriptions";
 
 app({
     init,

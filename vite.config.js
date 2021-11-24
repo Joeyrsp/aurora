@@ -8,4 +8,8 @@ export default {
             localsConvention: "camelCase",
         },
     },
+    root: "src",
+    build: {
+        outDir: "../docs",
+    },
 };

@@ -1,6 +1,4 @@
-import styles from "/src/styles.module.css";
-
-console.log(styles);
+import styles from "/styles.module.css";
 
 export default (state) => (
     <div class={styles.app}>

@@ -1,5 +1,5 @@
-import subscriptionExample from "/src/subscriptions/subscriptionExample";
+import subscriptionExample from "/subscriptions/subscriptionExample";
 
-import actionExample from "/src/actions/actionExample";
+import actionExample from "/actions/actionExample";
 
 export default (state) => [subscriptionExample(actionExample)];
