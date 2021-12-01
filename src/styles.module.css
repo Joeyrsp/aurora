@@ -1,16 +1,130 @@
+/*
 @import "sanitize.css";
 @import "sanitize.css/forms.css";
 @import "sanitize.css/assets.css";
 @import "sanitize.css/typography.css";
 @import "sanitize.css/reduce-motion.css";
+*/
+
+@import "https://fonts.googleapis.com/css2?family=Tangerine&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    border: 0;
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
 
 .app {
     height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 300px auto;
     grid-template-rows: min-content auto min-content;
+    background-color: #ececec;
+}
+
+.header,
+.footer {
+    grid-column: 1 / span 2;
 }
 
 .header {
-    grid-column: 1 / span 2;
+    display: flex;
+    align-items: stretch;
+    height: 75px;
+    padding: 0 5px;
+    gap: 5px;
+    background-color: #c0c0c0;
+
+    > * {
+        margin: 15px 5px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+
+    > div {
+        font-family: "Tangerine", cursive;
+        font-size: 64px;
+    }
+}
+
+.search {
+    flex-grow: 1;
+
+    > input {
+        height: 100%;
+        width: 100%;
+        padding: 0 22.5px;
+        border: none;
+        border-radius: 22.5px;
+        background-color: #eaeaea;
+        font-size: 18px;
+    }
+}
+
+.menu {
+    width: 45px;
+    border-radius: 100%;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+}
+
+.filters {
+    margin: 15px;
+    padding: 20px;
+    /* border-right: 1px solid black; */
+    background-color: #fff;
+}
+
+.items {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-between;
+    align-content: start;
+    padding: 15px;
+    gap: 15px;
+
+    .item {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        transition: box-shadow 0.2s;
+        display: grid;
+        background-color: #ffffff;
+
+        &:hover {
+            box-shadow: 0px 0px 20px black;
+        }
+
+        .type {
+        }
+
+        .price,
+        .rarity {
+            justify-self: end;
+        }
+
+        .name {
+            text-align: center;
+            grid-column: span 2;
+            align-self: end;
+        }
+    }
 }
