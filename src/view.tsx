@@ -20,22 +20,16 @@ export default (state) => (
         </div>
         <div class={styles.filters}>
             <div>Filters</div>
-            {["Rarity", "Type"].map((category) => [
-                <div>{category}</div>,
-                ...Object.entries(state.filter.categories[category.toLowerCase()]).map(([filter, value]) => (
-                    <div>
-                        {filter}
-                        <input type="checkbox" checked={value} onchange={onCheckFilter(category.toLowerCase(), filter)} />
-                    </div>
-                )),
-            ])}
+            {["Rarity", "Type"].map((category) => [<div class={styles.category}>{category}</div>, ...Object.entries(state.filter.categories[category.toLowerCase()]).map(([filter, value]) => [<label for={filter}>{filter}</label>, <input type="checkbox" checked={value} id={filter} onchange={onCheckFilter(category.toLowerCase(), filter)} />])])}
         </div>
         <div class={styles.items}>
-            {filterItems(state.items, state.filter).map((item) => (
+            {filterItems(state).map((item) => (
                 <div class={styles.item}>
-                    <div class={styles.type}>{itemType(item)}</div>
-                    <div class={styles.rarity}>{item.rarity}</div>
-                    {/* <div class={styles.price}>{item.price / 100 || ""}</div> */}
+                    <div>
+                        <div class={styles.rarity}>{item.rarity}</div>
+                        <div class={styles.type}>{itemType(item)}</div>
+                    </div>
+                    <div class={styles.price}>{item.price / 100 || "Inquire\nFor Price"}</div>
                     <div class={styles.name}>{item.name}</div>
                 </div>
             ))}

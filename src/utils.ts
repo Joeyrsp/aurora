@@ -15,13 +15,15 @@ export const goldToLevel = (gold: number) => {
 export const itemType = (item) => item.type || (item.staff && "staff") || (item.wondrous && "wondrous");
 
 // prettier-ignore
-export const filterItems = (
+export const filterItems = ({
     items /* : [{ name }] */, 
-    filter /* : { term: string; type: {}; rarity: {} } */
-) => items.filter(
+    filter /* : { term: string; type: {}; rarity: {} } */,
+    spent,
+}) => items.filter(
     (item) => 
         item.name.toLowerCase().includes(filter.term.toLowerCase()) && 
         // Object.entries(filter.categories).every(([category, fields]) => !Object.values(fields).some(Boolean) || fields[item[category]])
+        (item.rank <= goldToLevel(spent)) &&
         (!Object.values(filter.categories.type).some(Boolean) || filter.categories.type[itemType(item)]) &&
         (!Object.values(filter.categories.rarity).some(Boolean) || filter.categories.rarity[item.rarity])
 );

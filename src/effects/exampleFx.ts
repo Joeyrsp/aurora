@@ -1,6 +1,6 @@
 const exampleFx = (data) => [
     (dispatch, data) => {
-        console.log(data);
+        // console.log(data);
     },
     data,
 ];
