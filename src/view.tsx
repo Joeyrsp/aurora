@@ -13,7 +13,7 @@ export default (state) => (
                 <div>Aurora’s Emporium</div>
             </div>
             <div class={styles.search}>
-                <input type="text" value={state.filter.term} oninput={onSearchInput} />
+                <input type="text" placeholder="Search..." value={state.filter.term} oninput={onSearchInput} />
             </div>
             <div class={styles.menu}>
                 <div class={styles.button}>

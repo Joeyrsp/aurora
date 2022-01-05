@@ -12,7 +12,7 @@ console.log("logging items with no prices");
 console.log(items.filter((item) => !("price" in item)).map((item) => item.name));
 
 export default () => ({
-    spent: 3972,
+    spent: 3972 + 5000,
     items,
     filter: {
         term: "",

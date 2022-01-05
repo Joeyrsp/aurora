@@ -25,7 +25,7 @@ utility library
 rare
 4: 25,000
 utility delivery
-forge
+utility forge
 5: 50,000
 utility teleport
 very rare
