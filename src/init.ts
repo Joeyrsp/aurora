@@ -12,7 +12,12 @@ console.log("logging items with no prices");
 console.log(items.filter((item) => !("price" in item)).map((item) => item.name));
 
 export default () => ({
-    spent: 3972 + 5000,
+    // prettier-ignore
+    spent: 
+          3972 // from before
+        + 5000 // free level up
+        + 0.5  // louis selling bolts
+        + 0, // god damn comma
     items,
     filter: {
         term: "",

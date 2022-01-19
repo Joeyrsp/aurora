@@ -4,7 +4,7 @@ import onSearchInput from "/actions/onSearchInput";
 import onFieldInput from "/actions/onFieldInput";
 import setPreview from "/actions/setPreview";
 
-import { goldToLevel, filterItems, itemType, describeSector } from "/utils";
+import { goldToLevel, filterItems, itemType, describeSector, goldToProgress } from "/utils";
 
 export default (state) => (
     <div class={styles.app}>
@@ -18,7 +18,7 @@ export default (state) => (
             <div class={styles.menu}>
                 <div class={styles.button}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                        <path d={describeSector(50, 50, 50, 0, (goldToLevel(state.spent) / 6) * 359.9) + ""} />
+                        <path d={describeSector(50, 50, 50, 0, goldToProgress(state.spent) * 359.9) + ""} />
                     </svg>
                     <div class={styles.level}>{goldToLevel(state.spent)}</div>
                 </div>

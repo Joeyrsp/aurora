@@ -12,6 +12,20 @@ export const goldToLevel = (gold: number) => {
     return rank;
 };
 
+export const goldToProgress = (gold: number) => {
+    let progress = 1;
+
+    [1, 5, 15, 25, 50, 100].forEach((step: number) => {
+        if (gold > 0 && gold < step * 1000) {
+            progress = gold / (step * 1000);
+        }
+
+        gold -= step * 1000;
+    });
+
+    return progress;
+};
+
 export const itemType = (item) => item.type || (item.staff && "staff") || (item.wondrous && "wondrous");
 
 // prettier-ignore
