@@ -17,6 +17,9 @@ export default () => ({
           3972 // from before
         + 5000 // free level up
         + 0.5  // louis selling bolts
+        + 2250  // selling thay books
+        + 1200  // purchase spell scrolls
+        + 300  // diamonds
         + 0, // god damn comma
     items,
     filter: {
