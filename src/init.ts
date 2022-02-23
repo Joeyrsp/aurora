@@ -20,6 +20,7 @@ export default () => ({
         + 2250  // selling thay books
         + 1200  // purchase spell scrolls
         + 300  // diamonds
+        + 490 // jug, health pots x3, brewers supply, desert equipment x7
         + 0, // god damn comma
     items,
     filter: {
