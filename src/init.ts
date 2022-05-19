@@ -15,13 +15,14 @@ export default () => ({
     // prettier-ignore
     spent: 
           3972 // from before
-        + 5000 // free level up
-        + 0.5  // louis selling bolts
-        + 2250  // selling thay books
-        + 1200  // purchase spell scrolls
-        + 300  // diamonds
+        + 2028 // free level up for fixing robot
+        + 0.5 // louis selling bolts
+        + 2250 // selling thay books
+        + 1200 // purchase spell scrolls
+        + 300 // diamonds
         + 490 // jug, health pots x3, brewers supply, desert equipment x7
         + 100 // platinum rings x2
+        + 10659.5 // free level up for headhunting zauryn the blacksmith
         + 0, // god damn comma
     items,
     filter: {
