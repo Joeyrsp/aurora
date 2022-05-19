@@ -4,7 +4,7 @@ export const goldToLevel = (gold: number) => {
     [1, 5, 15, 25, 50, 100].forEach((step) => {
         gold -= step * 1000;
 
-        if (gold > 0) {
+        if (gold >= 0) {
             rank += 1;
         }
     });
@@ -16,7 +16,7 @@ export const goldToProgress = (gold: number) => {
     let progress = 1;
 
     [1, 5, 15, 25, 50, 100].forEach((step: number) => {
-        if (gold > 0 && gold < step * 1000) {
+        if (gold >= 0 && gold < step * 1000) {
             progress = gold / (step * 1000);
         }
 
