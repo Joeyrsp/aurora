@@ -15,14 +15,26 @@ export default () => ({
     // prettier-ignore
     spent: 
           3972 // from before
-        + 2028 // free level up for fixing robot
+        + 2028 // FREE level up for fixing robot
         + 0.5 // louis selling bolts
-        + 2250 // selling thay books
-        + 1200 // purchase spell scrolls
+        + 2250 // sell thay spell books
+        + 1200 // spell scrolls
         + 300 // diamonds
         + 490 // jug, health pots x3, brewers supply, desert equipment x7
         + 100 // platinum rings x2
-        + 10659.5 // free level up for headhunting zauryn the blacksmith
+        + 10659.5 // FREE level up for headhunting zauryn the blacksmith
+        + 25000 // sell book of +2 dex
+        + 300 // diamonds
+        + 4500 // flametongue
+        + 50 // gauntlets
+        + 6000 // gauntlets
+        + 4000 // +2 shield
+        + 4000 // +2 shield
+        + 8000 // amulet of health
+        + 2000 // bag of holding
+        + 500 // helm of comprehending languages
+        + 5000 // +2 bloodwell vial
+        + 300 // diamonds
         + 0, // god damn comma
     items,
     filter: {
@@ -33,3 +45,4 @@ export default () => ({
         },
     },
 });
+
